@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style>
+    .hidden {
+      display: none;
+    }
+
+    img {
+      position: absolute;
+      z-index: 1;
+      pointer-events: none;
+    }
+
+    div#imgviewer {
+      position: relative;
+    }
+
+    canvas {
+      position: relative;
+      z-index: 20;
+    }
+  </style>
+</head>
+<body>
+  <button id="filebutton">load SEF file</button>
+  <input class="hidden" type="file" id="fileselect" accept=".sef">
+  <h1 id="choose">wybierz: </h1>
+  <pre id="score">0/0</pre>
+  <div id="imgviewer"></div>
+
+  <script src="main.js"></script>
+</body>
+</html>

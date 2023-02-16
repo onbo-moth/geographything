@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style>
+    .hidden {
+      display: none;
+    }
+
+    img {
+      position: absolute;
+      z-index: 1;
+      pointer-events: none;
+    }
+
+    div#imgviewer {
+      position: relative;
+    }
+
+    canvas {
+      position: relative;
+      z-index: 20;
+    }
+  </style>
+</head>
+<body>
+  <div id="openimg">
+    <button id="filebutton">load image</button>
+    <input class="hidden" type="file" id="fileselect" accept=".png, .jpg, .jpeg">
+  </div>
+  <div class="hidden" id="creator">
+    <div id="imgviewer"></div>
+    <div id="optionselect">
+      <button onclick="abortVerticeCreate()">Stop placing Vertices</button>
+
+      <input type="radio" name="createselect" value="createAreas">
+      <label for="createAreas">Create Areas</label>
+
+      <input type="radio" name="createselect" value="createVertices">
+      <label for="createVertices">Create Vertices</label>
+
+      <input type="radio" name="createselect" value="removeVertices">
+      <label for="createVertices">Remove Vertices</label>
+    </div>
+
+    <h2>Area Type</h2>
+
+    <div id="typeselect">
+
+      <input type="radio" name="typeselect" value="rect">
+      <label for="rect">Rectangle</label>
+
+      <input type="radio" name="typeselect" value="circle">
+      <label for="rect">Circle</label>
+
+      <input type="radio" name="typeselect" value="poly">
+      <label for="rect">Polygon</label>
+    </div>
+
+    <h2>Vertice Shower</h2>
+
+    <button onclick="updateMapsView()">update maps view</button>
+    <div id="mapsview">
+    
+    </div>
+  </div>
+  <script src="main.js"></script>
+</body>
+</html>
